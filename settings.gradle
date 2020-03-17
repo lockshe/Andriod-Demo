@@ -1,0 +1,2 @@
+rootProject.name='DayDayUp'
+include ':app'
