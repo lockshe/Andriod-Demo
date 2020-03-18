@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/img1"
+        android:id="@+id/iv_cover"
         android:layout_width="100dp"
         android:layout_height="120dp"
         android:src="@drawable/jojo1"
@@ -16,10 +16,10 @@
     </ImageView>
 
     <TextView
-        android:id="@+id/text1"
+        android:id="@+id/tv_name"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_toRightOf="@+id/img1"
+        android:layout_toRightOf="@+id/iv_cover"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="30dp"
         android:text="@string/jojo1"
@@ -27,12 +27,12 @@
         android:typeface="serif"
         android:textStyle="bold"/>
     <TextView
-        android:id="@+id/score1"
+        android:id="@+id/tv_score"
         android:layout_width="250dp"
         android:layout_height="20dp"
         android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/img1"
-        android:layout_below="@+id/text1"
+        android:layout_toRightOf="@+id/iv_cover"
+        android:layout_below="@+id/tv_name"
         android:text="@string/score1"/>
     
 </merge>
