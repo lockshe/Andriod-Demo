@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bytedance.i18n.daydayup.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecycleActivity extends AppCompatActivity {
@@ -16,7 +17,7 @@ public class RecycleActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
-    private List<MyJOJOView> viewList;
+    private List<Params> paramsList;
 
 
     @Override
@@ -30,8 +31,11 @@ public class RecycleActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        adapter = new MyAdapter(viewList);
-
+        paramsList = new ArrayList<>();
+        paramsList.add(new Params(R.drawable.jojo1, R.string.jojo1, R.string.score1));
+        paramsList.add(new Params(R.drawable.jojo2, R.string.jojo2, R.string.score2));
+        paramsList.add(new Params(R.drawable.jojo3, R.string.jojo3, R.string.score3));
+        adapter = new MyAdapter(paramsList);
         recyclerView.setAdapter(adapter);
     }
 }
