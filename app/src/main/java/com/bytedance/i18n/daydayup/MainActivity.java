@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bytedance.i18n.daydayup.day1.JOJOActivity;
 import com.bytedance.i18n.daydayup.day2.RecycleActivity;
 import com.bytedance.i18n.daydayup.day3.MultiLayoutActivity;
+import com.bytedance.i18n.daydayup.day3.multitypeDemo.FooActivity;
 
 
 /**
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity{
     private Button day1Button;
     private Button day2Button;
     private Button day3Button;
+    private Button newDemo;
 
     //to remember user's dialog choice, initial value is 1
     private int userChoice = 1;
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity{
         day1Button = findViewById(R.id.day1Demo);
         day2Button = findViewById(R.id.day2Demo);
         day3Button = findViewById(R.id.day3Demo);
+        newDemo = findViewById(R.id.newDemo);
 
         day1Button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +61,14 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 showLayoutDialog();
+            }
+        });
+        newDemo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, FooActivity.class);
+                startActivity(intent);
             }
         });
     }

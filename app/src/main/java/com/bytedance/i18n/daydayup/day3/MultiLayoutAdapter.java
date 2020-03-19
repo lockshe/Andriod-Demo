@@ -21,7 +21,6 @@ public class MultiLayoutAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     private static final int SECOND_LAYOUT = 2;
     private static final int THIRD_LAYOUT = 3;
 
-
     private List<Params> paramsList;
 
 
