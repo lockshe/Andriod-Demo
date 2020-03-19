@@ -3,10 +3,16 @@
     <string name="jojo1">JOJO的奇妙冒险：幻影血脉</string>
     <string name="jojo2">JOJO的奇妙冒险：战斗潮流</string>
     <string name="jojo3">JOJO的奇妙冒险：星尘斗士</string>
+    <string name="jojo4">JOJO的奇妙冒险：疯狂钻石</string>
+    <string name="jojo5">JOJO的奇妙冒险：黄金之风</string>
+    <string name="jojo6">JOJO的奇妙冒险：石之海</string>
     <string name="warning">好好学习！看什么jojo</string>
     <string name="score1">9.2分</string>
     <string name="score2">9.7分</string>
     <string name="score3">9.8分</string>
+    <string name="score4">9.2分</string>
+    <string name="score5">9.6分</string>
+    <string name="score6">暂无</string>
     <string name="title_activity_linear">LinearActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

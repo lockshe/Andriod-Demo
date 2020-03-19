@@ -40,4 +40,5 @@ public class MovieInfoView extends RelativeLayout {
         movieName.setText(params.getTitleText());
         movieScore.setText(params.getScoreText());
     }
+
 }

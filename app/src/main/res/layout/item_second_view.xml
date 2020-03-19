@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/sec_lay_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/jojo3"/>
+
+    <ImageView
+        android:id="@+id/sec_lay_img2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/jojo3"/>
+
+    <ImageView
+        android:id="@+id/sec_lay_img3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/jojo3"/>
+</LinearLayout>

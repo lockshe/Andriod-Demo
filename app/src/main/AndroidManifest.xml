@@ -17,29 +17,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".day1.JOJOActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".day1.JOJOPlusActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".day2.RecycleActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".day1.JOJOActivity" android:label="RelativeLayoutDemo"/>
+        <activity android:name=".day1.JOJOPlusActivity" android:label="FailedDemo"/>
+        <activity android:name=".day2.RecycleActivity" android:label="RecyclerViewDemo"/>
+        <activity android:name=".day3.MultiLayoutActivity" android:label="MultiLayoutDemo"/>
     </application>
 
 </manifest>
