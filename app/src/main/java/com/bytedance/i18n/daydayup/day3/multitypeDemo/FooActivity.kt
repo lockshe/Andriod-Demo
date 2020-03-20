@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_recycle.view.*
 class FooActivity: AppCompatActivity(){
 
     private val adapter = MultiTypeAdapter()
-    private val items = ArrayList<Int>();
+    private val items = ArrayList<Foo>();
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,12 +20,12 @@ class FooActivity: AppCompatActivity(){
 
         val recyclerView = findViewById<RecyclerView>(R.id.my_recycler_view)
         adapter.register(FooViewDelegate())
-        items.add(R.drawable.jojo1)
-        items.add(R.drawable.jojo2)
-        items.add(R.drawable.jojo3)
-        items.add(R.drawable.jojo4)
-        items.add(R.drawable.jojo5)
-        items.add(R.drawable.jojo6)
+        items.add(Foo(R.drawable.jojo1))
+        items.add(Foo(R.drawable.jojo2))
+        items.add(Foo(R.drawable.jojo3))
+        items.add(Foo(R.drawable.jojo4))
+        items.add(Foo(R.drawable.jojo5))
+        items.add(Foo(R.drawable.jojo6))
         adapter.items = items;
         recyclerView.layoutManager = GridLayoutManager(this, 2)
         recyclerView.adapter = adapter

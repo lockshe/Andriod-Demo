@@ -109,7 +109,7 @@ public class MultiLayoutAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             @Override
             public boolean onLongClick(View v) {
                 addData(position);
-                return false;
+                return true;
             }
         });
     }

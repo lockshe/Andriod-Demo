@@ -16,7 +16,6 @@ class FooViewDelegate: ItemViewDelegate<Foo, FooViewDelegate.ViewHolder>() {
     }
 
     override fun onCreateViewHolder(context: Context, parent: ViewGroup): ViewHolder {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
 
         return ViewHolder(FooView(context))
     }
@@ -24,6 +23,5 @@ class FooViewDelegate: ItemViewDelegate<Foo, FooViewDelegate.ViewHolder>() {
     class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         val fooView : FooView = itemView as FooView
     }
-
 
 }

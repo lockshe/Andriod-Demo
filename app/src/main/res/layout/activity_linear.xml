@@ -20,7 +20,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="10dp"
-                android:background="@android:color/background_dark">
+                android:background="@android:color/background_dark"
+                android:layout_marginStart="20dp">
             </ImageView>
 
             <TextView
@@ -33,7 +34,9 @@
                 android:text="@string/jojo1"
                 android:textSize="20sp"
                 android:typeface="serif"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/img1" />
             <TextView
                 android:id="@+id/score1"
                 android:layout_width="250dp"
@@ -41,7 +44,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@+id/img1"
                 android:layout_below="@+id/text1"
-                android:text="@string/score1"/>
+                android:text="@string/score1"
+                android:layout_toEndOf="@+id/img1"
+                android:layout_marginStart="10dp" />
 
             <Button
                 android:id="@+id/button1"
@@ -50,7 +55,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@+id/img1"
                 android:layout_below="@id/score1"
-                android:background="@drawable/play2"/>
+                android:background="@drawable/play2"
+                android:layout_toEndOf="@+id/img1"
+                android:layout_marginStart="10dp" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -112,7 +119,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="10dp"
-                android:background="@android:color/background_dark">
+                android:background="@android:color/background_dark"
+                android:layout_marginStart="20dp">
             </ImageView>
 
             <TextView
@@ -125,7 +133,9 @@
                 android:text="@string/jojo3"
                 android:textSize="20sp"
                 android:typeface="serif"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/img3" />
             <TextView
                 android:id="@+id/score3"
                 android:layout_width="250dp"
@@ -133,7 +143,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@+id/img3"
                 android:layout_below="@+id/text3"
-                android:text="@string/score2"/>
+                android:text="@string/score2"
+                android:layout_toEndOf="@+id/img3"
+                android:layout_marginStart="10dp" />
 
             <Button
                 android:id="@+id/button3"
@@ -142,7 +154,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@+id/img3"
                 android:layout_below="@id/score3"
-                android:background="@drawable/play2"/>
+                android:background="@drawable/play2"
+                android:layout_toEndOf="@+id/img3"
+                android:layout_marginStart="10dp" />
         </RelativeLayout>
 
 </LinearLayout>

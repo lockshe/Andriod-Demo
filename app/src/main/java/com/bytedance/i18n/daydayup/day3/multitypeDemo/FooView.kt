@@ -7,15 +7,16 @@ import android.widget.LinearLayout
 import com.bytedance.i18n.daydayup.R
 import java.util.jar.Attributes
 
-class FooView : LinearLayout {
+class FooView : LinearLayout{
 
-    val imageView = findViewById<ImageView>(R.id.img1)
+    private lateinit var imageView1:ImageView
 
-    constructor(context: Context):super(context){
-        View.inflate(context, R.layout.item_second_view, this)
+    constructor(context: Context) : super(context) {
+        View.inflate(context, R.layout.multi_item_view, this)
+        imageView1 = findViewById(R.id.multi_item_img)
     }
 
-    fun bindData(id: Int){
-        imageView.setImageResource(id)
+    fun bindData(id: Int) {
+        imageView1.setImageResource(id)
     }
 }
