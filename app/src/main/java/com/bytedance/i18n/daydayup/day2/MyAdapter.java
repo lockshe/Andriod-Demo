@@ -1,8 +1,12 @@
 package com.bytedance.i18n.daydayup.day2;
 
+import android.content.Context;
 import android.graphics.Movie;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,16 +30,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     public MyAdapter(List<Params> paramsList){
         this.paramsList = paramsList;
+
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
 //      布局文件根结点是RelativeLayout,因此无法强转
 //      MovieInfoView v = (MovieInfoView) LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_rel, parent, false);
         MyViewHolder vh  = new MyViewHolder(new MovieInfoView(parent.getContext()));
-
         return vh;
     }
 
@@ -48,5 +51,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public int getItemCount() {
         return paramsList.size();
     }
+
 
 }
