@@ -27,8 +27,10 @@ public class DetailsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_details, container, false);
         imageView = view.findViewById(R.id.jojoname);
         textView = view.findViewById(R.id.jojotext);
-        Params params = new Gson().fromJson(getActivity().getIntent().getStringExtra("params"), Params.class);
+//      从activity中取数据
+//        Params params = new Gson().fromJson(getActivity().getIntent().getStringExtra("params"), Params.class);
 
+        Params params = new Gson().fromJson(getArguments().getString("params"), Params.class);
         imageView.setImageResource(params.getImgSrc());
         textView.setText(params.getTitleText());
         return view;

@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -64,10 +65,21 @@ public class ListFragment extends Fragment {
 
         @Override
         public void onClick(View v) {
-//            Toast.makeText(getActivity(), "laban", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(getActivity(), DetailsActivity.class);
-            intent.putExtra("params", new Gson().toJson(paramsList.get(movieInfoView.getIndex())));
-            startActivity(intent);
+//            Toast.makeText(getActivity(), "laban", Toast.LENGTH_SHORT).show()；
+//            这种写法是两个activity进行跳转
+//            Intent intent = new Intent(getActivity(), DetailsActivity.class);
+//            intent.putExtra("params", new Gson().toJson(paramsList.get(movieInfoView.getIndex())));
+//            startActivity(intent);
+            DetailsFragment detailsFragment = new DetailsFragment();
+            Bundle args = new Bundle();
+            args.putString("params", new Gson().toJson(paramsList.get(movieInfoView.getIndex())));
+            detailsFragment.setArguments(args);
+
+            FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment_container, detailsFragment);
+            transaction.addToBackStack(null);
+
+            transaction.commit();
         }
     }
 
@@ -95,7 +107,6 @@ public class ListFragment extends Fragment {
         public int getItemCount() {
             return paramsList.size();
         }
-
 
     }
 }
