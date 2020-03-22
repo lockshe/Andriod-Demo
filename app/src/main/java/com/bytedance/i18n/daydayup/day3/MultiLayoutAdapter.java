@@ -91,7 +91,7 @@ public class MultiLayoutAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     @Override
     public void onBindViewHolder(@NonNull final RecyclerView.ViewHolder holder, final int position) {
         if (holder instanceof MyViewHolder){
-            ((MyViewHolder)holder).movieInfoView.bindData(paramsList.get(position));
+            ((MyViewHolder)holder).movieInfoView.bindData(paramsList.get(position), position);
         }else if (holder instanceof  SecondViewHolder) {
             SecondViewHolder secondViewHolder = (SecondViewHolder) holder;
             secondViewHolder.bindData(paramsList.get(position));

@@ -44,7 +44,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.movieInfoView.bindData(paramsList.get(position));
+        holder.movieInfoView.bindData(paramsList.get(position), position);
     }
 
     @Override

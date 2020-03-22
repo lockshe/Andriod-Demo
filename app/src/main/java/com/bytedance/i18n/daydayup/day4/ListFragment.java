@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bytedance.i18n.daydayup.R;
 import com.bytedance.i18n.daydayup.day2.MovieInfoView;
 import com.bytedance.i18n.daydayup.day2.Params;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,6 +66,7 @@ public class ListFragment extends Fragment {
         public void onClick(View v) {
 //            Toast.makeText(getActivity(), "laban", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(getActivity(), DetailsActivity.class);
+            intent.putExtra("params", new Gson().toJson(paramsList.get(movieInfoView.getIndex())));
             startActivity(intent);
         }
     }
@@ -86,12 +88,14 @@ public class ListFragment extends Fragment {
 
         @Override
         public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
-            holder.movieInfoView.bindData(paramsList.get(position));
+            holder.movieInfoView.bindData(paramsList.get(position), position);
         }
 
         @Override
         public int getItemCount() {
             return paramsList.size();
         }
+
+
     }
 }

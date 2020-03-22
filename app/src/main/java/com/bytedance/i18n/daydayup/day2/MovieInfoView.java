@@ -14,6 +14,7 @@ import com.bytedance.i18n.daydayup.R;
  */
 public class MovieInfoView extends RelativeLayout {
 
+    int index;
     ImageView coverView;
     TextView movieName;
     TextView movieScore;
@@ -35,10 +36,14 @@ public class MovieInfoView extends RelativeLayout {
 
     }
 
-    public void bindData(Params params) {
+    public void bindData(Params params, int index) {
         coverView.setImageResource(params.getImgSrc());
         movieName.setText(params.getTitleText());
         movieScore.setText(params.getScoreText());
+        this.index = index;
     }
 
+    public int getIndex(){
+        return index;
+    }
 }

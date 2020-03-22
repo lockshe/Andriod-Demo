@@ -1,5 +1,7 @@
 package com.bytedance.i18n.daydayup.day2;
 
+import java.util.UUID;
+
 public class Params {
 
     private int imgSrc;

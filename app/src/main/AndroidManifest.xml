@@ -17,13 +17,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".day4.ListActivity" android:label="xxx">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".day4.ListActivity" android:label="movieList"/>
         <activity android:name=".day1.JOJOActivity" android:label="RelativeLayoutDemo"/>
         <activity android:name=".day1.JOJOPlusActivity" android:label="FailedDemo"/>
         <activity android:name=".day2.RecycleActivity" android:label="RecyclerViewDemo"/>
