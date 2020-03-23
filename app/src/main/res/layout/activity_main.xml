@@ -39,4 +39,16 @@
         android:layout_height="40dp"
         android:text="day4Demo"/>
 
+    <Button
+        android:id="@+id/day5Demo"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="day5Demo"/>
+
+    <Button
+        android:id="@+id/viewPagerDemo"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="viewPager"/>
+
 </LinearLayout>

@@ -1,9 +1,11 @@
 package com.bytedance.i18n.daydayup.day5;
 
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,6 +17,7 @@ import com.bytedance.i18n.daydayup.R;
 public class MineFragment extends Fragment {
 
     TextView textView;
+
 
     @Nullable
     @Override

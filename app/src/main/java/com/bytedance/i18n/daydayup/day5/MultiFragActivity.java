@@ -81,7 +81,7 @@ public class MultiFragActivity extends AppCompatActivity {
         //hide the fragment
         transaction.hide(fragments.get(lastFragmentId));
         if (fragments.get(index).isAdded() == false){
-            transaction.replace(R.id.message, fragments.get(index));
+            transaction.add(R.id.message, fragments.get(index));
         }
         transaction.show(fragments.get(index)).commitAllowingStateLoss();
         lastFragmentId = index;

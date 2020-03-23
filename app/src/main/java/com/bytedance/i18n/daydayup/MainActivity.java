@@ -16,6 +16,8 @@ import com.bytedance.i18n.daydayup.day2.RecycleActivity;
 import com.bytedance.i18n.daydayup.day3.MultiLayoutActivity;
 import com.bytedance.i18n.daydayup.day3.multitypeDemo.FooActivity;
 import com.bytedance.i18n.daydayup.day4.ListActivity;
+import com.bytedance.i18n.daydayup.day5.MultiFragActivity;
+import com.bytedance.i18n.daydayup.day5.ViewPagerActivity;
 
 
 /**
@@ -28,6 +30,8 @@ public class MainActivity extends AppCompatActivity{
     private Button day3Button;
     private Button newDemo;
     private Button day4Button;
+    private Button day5Button;
+    private Button viewPage;
     //to remember user's dialog choice, initial value is 1
     private int userChoice = 1;
 
@@ -41,6 +45,8 @@ public class MainActivity extends AppCompatActivity{
         day4Button = findViewById(R.id.day4Demo);
 
         newDemo = findViewById(R.id.newDemo);
+        day5Button = findViewById(R.id.day5Demo);
+        viewPage = findViewById(R.id.viewPagerDemo);
 
         day1Button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +91,25 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(intent);
             }
         });
+
+        viewPage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, ViewPagerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        day5Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, MultiFragActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     //choose the RecyclerView's layoutManger
