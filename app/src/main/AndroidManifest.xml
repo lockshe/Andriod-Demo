@@ -22,13 +22,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".day7.WeatherActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
         <activity android:name=".day4.ListActivity" android:label="movieList"/>
         <activity android:name=".day1.JOJOActivity" android:label="RelativeLayoutDemo"/>
@@ -39,6 +32,8 @@
         <activity android:name=".day4.DetailsActivity" android:label="details"/>
         <activity android:name=".day5.MultiFragActivity" android:label="MultiFrag"/>
         <activity android:name=".day5.ViewPagerActivity" android:label="ViewPage"/>
+        <activity android:name=".day7.WeatherActivity" android:label="Weather"/>
+
 
     </application>
 

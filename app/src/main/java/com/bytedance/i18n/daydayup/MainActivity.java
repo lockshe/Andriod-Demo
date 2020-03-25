@@ -17,6 +17,7 @@ import com.bytedance.i18n.daydayup.day3.multitypeDemo.FooActivity;
 import com.bytedance.i18n.daydayup.day4.ListActivity;
 import com.bytedance.i18n.daydayup.day5.MultiFragActivity;
 import com.bytedance.i18n.daydayup.day5.ViewPagerActivity;
+import com.bytedance.i18n.daydayup.day7.WeatherActivity;
 
 
 /**
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity{
     private Button day4Button;
     private Button day5Button;
     private Button viewPage;
+    private Button day7Button;
     //to remember user's dialog choice, initial value is 1
     private int userChoice = 1;
 
@@ -45,7 +47,8 @@ public class MainActivity extends AppCompatActivity{
 
         newDemo = findViewById(R.id.newDemo);
         day5Button = findViewById(R.id.day5Demo);
-        viewPage = findViewById(R.id.viewPagerDemo);
+        viewPage =  findViewById(R.id.viewPagerDemo);
+        day7Button = findViewById(R.id.weather);
 
         day1Button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,6 +112,14 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
+        day7Button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this, WeatherActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     //choose the RecyclerView's layoutManger
