@@ -17,7 +17,7 @@ class SearchFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.layout_multi_frag, container, false)
         textView = view.findViewById(R.id.frag_text)
-        textView!!.setText("Search Page")
+        textView?.text = ""
         return view
     }
 }
