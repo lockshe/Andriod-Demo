@@ -1,5 +1,6 @@
 package com.bytedance.i18n.daydayup.day4
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -87,6 +88,8 @@ class ListFragment : Fragment() {
 //            Intent intent = new Intent(getActivity(), DetailsActivity.class);
 //            intent.putExtra("params", new Gson().toJson(paramsList.get(movieInfoView.getIndex())));
 //            startActivity(intent);
+            var intent = Intent()
+            intent.extras
             val detailsFragment = DetailsFragment()
             val args = Bundle()
             args.putString("params", Gson().toJson(paramsList!![movieInfoView.index]))

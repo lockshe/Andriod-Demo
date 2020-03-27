@@ -126,25 +126,43 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="bottom"
-        android:layout_marginTop="10dp">
-     <EditText
-         android:id="@+id/longtitude"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:hint="经度" />
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="30dp">
 
-     <EditText
-         android:id="@+id/latitude"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:hint="纬度" />
-    <Button
-        android:id="@+id/queryBt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="query weather status" />
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="纬度:"/>
+
+         <TextView
+             android:id="@+id/longti"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="40dp"
+             android:text="sssss"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="经度"/>
+
+        <TextView
+            android:id="@+id/lati"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="sssss"/>
+
+        <Button
+            android:id="@+id/Bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="query"/>
     </LinearLayout>
+
+
 
 </LinearLayout>

@@ -37,7 +37,7 @@ class WeatherActivity : AppCompatActivity(),CoroutineScope by MainScope() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weather)
-        queryBt = findViewById(R.id.queryBt)
+//        queryBt = findViewById(R.id.Bt)
         statusText = findViewById(R.id.status)
         tempText = findViewById(R.id.temp)
         humidText = findViewById(R.id.humidity)
@@ -45,8 +45,8 @@ class WeatherActivity : AppCompatActivity(),CoroutineScope by MainScope() {
         visibilityText = findViewById(R.id.visi)
         speedText = findViewById(R.id.speed)
         directionText = findViewById(R.id.direction)
-        longitude = findViewById(R.id.longtitude)
-        latitude = findViewById(R.id.latitude)
+        longitude = findViewById(R.id.longti)
+        latitude = findViewById(R.id.lati)
 
         queryBt.setOnClickListener{
             sendMessage()
