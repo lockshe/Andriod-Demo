@@ -37,7 +37,7 @@ class WeatherActivity : AppCompatActivity(),CoroutineScope by MainScope() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weather)
-//        queryBt = findViewById(R.id.Bt)
+        queryBt = findViewById(R.id.Bt)
         statusText = findViewById(R.id.status)
         tempText = findViewById(R.id.temp)
         humidText = findViewById(R.id.humidity)

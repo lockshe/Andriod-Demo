@@ -9,5 +9,4 @@ class WeatherViewModel : ViewModel() {
 
     var weatherData: MutableLiveData<WeatherModel> = MutableLiveData()
 
-
 }

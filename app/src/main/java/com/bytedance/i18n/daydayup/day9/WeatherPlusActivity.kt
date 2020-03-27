@@ -5,6 +5,7 @@ import android.content.pm.PackageManager
 import android.location.Location
 import android.location.LocationListener
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
@@ -37,7 +38,7 @@ class WeatherPlusActivity: AppCompatActivity(), CoroutineScope by MainScope(){
         ) {
             bindLocationListener()
         } else {
-            Toast.makeText(this, "This sample requires Location access", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Query Weather requires Location access", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -47,7 +48,9 @@ class WeatherPlusActivity: AppCompatActivity(), CoroutineScope by MainScope(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.d("Fds","starttt")
         setContentView(R.layout.activity_weather)
+        Log.d("Fds","endddd")
         model = ViewModelProviders.of(this).get(WeatherViewModel::class.java)
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
@@ -64,8 +67,11 @@ class WeatherPlusActivity: AppCompatActivity(), CoroutineScope by MainScope(){
             bindLocationListener()
         }
 
-        if (model.weatherData == null){
+        if (model.weatherData.value == null){
+            Log.d("Fds","senddddddd")
             sendMessage()
+        }else{
+            updateUI(model.weatherData.value!!)
         }
     }
 
@@ -77,8 +83,9 @@ class WeatherPlusActivity: AppCompatActivity(), CoroutineScope by MainScope(){
             }
 
             var result = data.await()
+            Log.d("Fdsddd",result.toString())
             if (result != null) {
-                model.weatherData.value = data as WeatherModel
+                model.weatherData.value = result
                 updateUI(result)
             }else{
                 Toast.makeText(application.applicationContext, "input Error!", Toast.LENGTH_SHORT)
@@ -89,8 +96,9 @@ class WeatherPlusActivity: AppCompatActivity(), CoroutineScope by MainScope(){
     // fuction to send http request
     suspend fun getData() = withContext(Dispatchers.IO){
 
-        val url = "https://api.caiyunapp.com/v2/TAkhjf8d1nlSlspN/${longti.text},${lati.text}/realtime.json"
 
+        val url = "https://api.caiyunapp.com/v2/TAkhjf8d1nlSlspN/${longti.text},${lati.text}/realtime.json"
+        Log.d("info", url)
         var request: Request = Request.Builder()
             .get()
             .url(url)
@@ -100,7 +108,7 @@ class WeatherPlusActivity: AppCompatActivity(), CoroutineScope by MainScope(){
         var gson = Gson()
         var data : ResponseData = gson.fromJson(
             response.body?.string(), ResponseData::class.java)
-
+        Log.d("info", data.result.toString())
         data.result
     }
 
@@ -113,6 +121,16 @@ class WeatherPlusActivity: AppCompatActivity(), CoroutineScope by MainScope(){
         visi.text = "${data.visibility}"
         speed.text = "${data.wind?.speed} m/s"
         direction.text = "${data.wind?.direction}"
+
+        if (data.temperature >= 20){
+            ZiJiWeather.setBackgroundResource(R.drawable.sunny2)
+        }else if (data.humidity >= 0.9){
+            ZiJiWeather.setBackgroundResource(R.drawable.rainy)
+        }else if (data.cloudrate >= 0.5 && data.temperature < 20){
+            ZiJiWeather.setBackgroundResource(R.drawable.cloudy)
+        }else if (data.temperature < 10){
+            ZiJiWeather.setBackgroundResource(R.drawable.snowy)
+        }
     }
 
     override fun onDestroy() {

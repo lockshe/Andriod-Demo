@@ -44,8 +44,6 @@
         <activity android:name=".day5.MultiFragActivity" android:label="MultiFrag"/>
         <activity android:name=".day5.ViewPagerActivity" android:label="ViewPage"/>
         <activity android:name=".day7.WeatherActivity" android:label="Weather"/>
-
-
     </application>
 
 </manifest>
