@@ -33,6 +33,21 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".test.ListViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".test.ChatActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity android:name=".day4.ListActivity" android:label="movieList"/>
         <activity android:name=".day1.JOJOActivity" android:label="RelativeLayoutDemo"/>
