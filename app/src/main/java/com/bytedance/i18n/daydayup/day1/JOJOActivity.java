@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bytedance.i18n.daydayup.R;
 
+import java.util.concurrent.CopyOnWriteArrayList;
+
 public class JOJOActivity extends AppCompatActivity {
 
     private Button playButton;
@@ -26,8 +28,6 @@ public class JOJOActivity extends AppCompatActivity {
         playView1 = findViewById(R.id.view1);
         playView2 = findViewById(R.id.view2);
         playView3 = findViewById(R.id.view3);
-
-
         playView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

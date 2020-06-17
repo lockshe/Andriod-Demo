@@ -110,15 +110,15 @@ class WeatherPlusActivity: AppCompatActivity(), CoroutineScope by MainScope(){
             direction.text = "${data.wind?.direction}"
 
 
-            if (data.temperature >= 15){
-                ZiJiWeather.setBackgroundResource(R.drawable.sunny2)
-            }else if (data.humidity >= 0.9){
-                ZiJiWeather.setBackgroundResource(R.drawable.rainy)
-            }else if (data.cloudrate >= 0.5 && data.temperature < 20){
-                ZiJiWeather.setBackgroundResource(R.drawable.cloudy)
-            }else if (data.temperature < 10){
-                ZiJiWeather.setBackgroundResource(R.drawable.snowy)
-            }
+//            if (data.temperature >= 15){
+//                ZiJiWeather.setBackgroundResource(R.drawable.sunny2)
+//            }else if (data.humidity >= 0.9){
+//                ZiJiWeather.setBackgroundResource(R.drawable.rainy)
+//            }else if (data.cloudrate >= 0.5 && data.temperature < 20){
+                ZiJiWeather.setBackgroundResource(R.drawable.msg2)
+//            }else if (data.temperature < 10){
+//                ZiJiWeather.setBackgroundResource(R.drawable.snowy)
+//            }
         }
     }
 

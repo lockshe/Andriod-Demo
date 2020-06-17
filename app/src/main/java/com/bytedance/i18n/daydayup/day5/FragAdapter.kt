@@ -13,7 +13,7 @@ class FragAdapter(
         if (fragments != null) {
             return fragments.get(position)
         }
-        throw IllegalArgumentException()
+        throw IllegalArgumentException() as Throwable
     }
 
     override fun getCount(): Int {

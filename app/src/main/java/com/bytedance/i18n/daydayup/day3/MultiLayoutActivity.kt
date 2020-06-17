@@ -26,7 +26,7 @@ class MultiLayoutActivity : AppCompatActivity() {
         val choice = this.intent.getIntExtra("choice", 0)
         when (choice) {
             0 -> layoutManager = LinearLayoutManager(this)
-            1 -> layoutManager = GridLayoutManager(this, 2)
+            1 -> layoutManager = GridLayoutManager(this, 2, RecyclerView.HORIZONTAL, false)
             2 -> {
                 val staggeredGridLayoutManager =
                     StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
