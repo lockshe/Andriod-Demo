@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="360dp"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:background="@color/blue1">
+    <TextView
+        android:id="@+id/iv_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="see you"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:gravity="center" />
+</RelativeLayout>

@@ -21,9 +21,6 @@ import com.bytedance.i18n.daydayup.day5.ViewPagerActivity;
 import com.bytedance.i18n.daydayup.day7.WeatherActivity;
 
 
-/**
- * @author wangxiaonan
- */
 public class MainActivity extends AppCompatActivity{
 
     private Button day1Button;
